@@ -1,0 +1,8 @@
+/target
+.cache/
+.idea/
+.vscode/
+.zed/
+.DS_Store
+.cargo/*
+!.cargo/_config.toml

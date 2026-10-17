@@ -1,0 +1,10 @@
+[build]
+# TODO: Find a better way to select target specifications
+# Duplicate this file to .cargo/config.toml and uncomment one of the lines below to select your
+# target specification.
+# target = "spec/riscv64gc-unknown-neon-kernel.json"
+
+[unstable]
+json-target-spec = true
+build-std = ["core", "alloc"]
+build-std-features = ["compiler-builtins-mem"]

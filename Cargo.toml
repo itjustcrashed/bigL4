@@ -1,0 +1,33 @@
+[package]
+name = "bigL4"
+version = "0.1.0"
+edition = "2024"
+license = "Apache-2.0"
+
+[[bin]]
+name = "kernel"
+path = "src/kernel.rs"
+test = false
+bench = false
+doctest = false
+
+[dependencies]
+fdt-raw = "0.3.0"
+spin = "0.12.3"
+thiserror = { version = "2.0.21", default-features = false }
+volatile-register = "0.2.2"
+
+[target.'cfg(target_arch = "riscv64")'.dependencies]
+riscv = { version = "0.16.1", features = ["s-mode"] }
+
+[profile.debug]
+opt-level = 3
+lto = false
+codegen-units = 256
+panic = "abort"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
