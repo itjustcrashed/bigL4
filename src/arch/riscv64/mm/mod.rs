@@ -16,12 +16,15 @@
 
 mod sv39;
 
+// TODO: Implement this file
+
+// MARK: virt --> phys
+
 /// Resolves and returns the physical immutable pointer of a virtual immutable pointer.
 ///
 /// This function will always be inline.
 #[inline(always)]
 pub(crate) fn virt_to_phys_ptr<T>(virt: *const T) -> *const T {
-    // TODO: virtual pointer to physical pointer (immutable)
     virt
 }
 
@@ -30,7 +33,6 @@ pub(crate) fn virt_to_phys_ptr<T>(virt: *const T) -> *const T {
 /// This function will always be inline.
 #[inline(always)]
 pub(crate) fn virt_to_phys_ptr_mut<T>(virt: *mut T) -> *mut T {
-    // TODO: virtual pointer to physical pointer (mutable)
     virt
 }
 
@@ -38,7 +40,32 @@ pub(crate) fn virt_to_phys_ptr_mut<T>(virt: *mut T) -> *mut T {
 ///
 /// This function will always be inline.
 #[inline(always)]
-pub(crate) fn virt_to_phys_addr(addr: usize) -> usize {
-    // TODO: virtual address to physical pointer
-    addr
+pub(crate) fn virt_to_phys_addr(virt: usize) -> usize {
+    virt
+}
+
+// MARK: phys --> virt
+
+/// Resolves and returns the virtual immutable pointer of a physical immutable pointer.
+///
+/// This function will always be inline.
+#[inline(always)]
+pub(crate) fn phys_to_virt_ptr<T>(virt: *const T) -> *const T {
+    virt
+}
+
+/// Resolves and returns the virtual mutable pointer of a physical mutable pointer.
+///
+/// This function will always be inline.
+#[inline(always)]
+pub(crate) fn phys_to_virt_ptr_mut<T>(virt: *mut T) -> *mut T {
+    virt
+}
+
+/// Resolves and returns the physical address of a virtual address.
+///
+/// This function will always be inline.
+#[inline(always)]
+pub(crate) fn phys_to_virt_addr(virt: usize) -> usize {
+    virt
 }
