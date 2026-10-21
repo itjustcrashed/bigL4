@@ -57,7 +57,7 @@ struct Ns16550aMmio {
     spr: RW<u8>,
 }
 
-/// Configuration for the [`Ns16550a`] driver (which is just a physical base address).
+/// Configuration for the [Ns16550a] driver (which is just a physical base address).
 pub(crate) struct Ns16550aConfig {
     base_address: usize,
     clock_frequency: u32,

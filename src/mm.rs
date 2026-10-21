@@ -187,7 +187,7 @@ pub(crate) struct MemoryRegion {
     pub(crate) status: MemoryRegionStatus,
 }
 
-/// A status for a [`MemoryRegion`].
+/// A status for a [MemoryRegion].
 ///
 /// Vacant regions are memory that can be used by the kernel for general allocations, while reserved
 /// regions should only be written to for special purposes such as writing to MMIO.
