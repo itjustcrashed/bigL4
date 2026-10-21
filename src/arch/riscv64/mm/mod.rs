@@ -12,6 +12,10 @@
 // or implied. See the License for the specific language governing permissions and limitations under
 // the License.
 
+//! RISC-V memory management.
+
+mod sv39;
+
 /// Resolves and returns the physical immutable pointer of a virtual immutable pointer.
 ///
 /// This function will always be inline.

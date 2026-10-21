@@ -12,6 +12,7 @@ bench = false
 doctest = false
 
 [dependencies]
+bitflags = "2.13.2"
 fdt-raw = "0.3.0"
 spin = "0.12.3"
 thiserror = { version = "2.0.21", default-features = false }
